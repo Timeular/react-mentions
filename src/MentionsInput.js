@@ -255,7 +255,7 @@ class MentionsInput extends React.Component {
         suggestions={this.state.suggestions}
         onSelect={this.addMention}
         onMouseDown={this.handleSuggestionsMouseDown}
-        onMouseEnter={focusIndex =>
+        onMouseMove={focusIndex =>
           this.setState({
             focusIndex,
             scrollFocusedIntoView: false,

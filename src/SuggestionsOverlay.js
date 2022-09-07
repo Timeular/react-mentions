@@ -104,7 +104,7 @@ class SuggestionsOverlay extends Component {
         suggestion={result}
         focused={isFocused}
         onClick={() => this.select(result, queryInfo)}
-        onMouseEnter={() => this.handleMouseEnter(index)}
+        onMouseMove={() => this.handleMouseMove(index)}
       />
     )
   }
@@ -125,9 +125,9 @@ class SuggestionsOverlay extends Component {
     return <LoadingIndicator style={this.props.style('loadingIndicator')} />
   }
 
-  handleMouseEnter(index, ev) {
-    if (this.props.onMouseEnter) {
-      this.props.onMouseEnter(index)
+  handleMouseMove(index, ev) {
+    if (this.props.onMouseMove) {
+      this.props.onMouseMove(index)
     }
   }
 
